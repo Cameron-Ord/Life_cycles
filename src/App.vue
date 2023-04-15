@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="main_div">
     <header id="page_header"><page-header></page-header></header>
     <main id="page_main"><life-cycle></life-cycle></main>
     <footer id="page_footer"><page-footer></page-footer></footer>
