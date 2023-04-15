@@ -1,28 +1,80 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <header id="page_header"><page-header></page-header></header>
+    <main id="page_main"><life-cycle></life-cycle></main>
+    <footer id="page_footer"><page-footer></page-footer></footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import LifeCycle from './components/LifeCycle.vue';
+import PageHeader from './components/PageHeader.vue';
+import PageFooter from './components/PageFooter.vue';
 export default {
-  name: 'App',
+  name: 'life_cycle',
   components: {
-    HelloWorld
+
+   
+    PageHeader,
+    LifeCycle,
+    PageFooter
+
   }
 }
 </script>
 
 <style>
-#app {
+
+*{
+
+  padding: 0px;
+  margin: 0px;
+}
+
+body{
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+
+
+
+}
+#page_header{
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+min-height: 10vh;
+
+align-items: center;
+
+justify-items: center;
+}
+
+#page_main{
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+min-height: 80vh;
+
+align-items: center;
+
+justify-items: center;
+}
+
+#page_footer{
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+min-height: 10vh;
+
+align-items: center;
+
+justify-items: center;
 }
 </style>
